@@ -8,7 +8,7 @@ async function chatWithTogetherAI(prompt) {
   loading.classList.add( 'message');
   loading.innerHTML = '<img src="https://media.tenor.com/cnb4G0hjQmwAAAAi/writing-loading.gif" alt="">'
   container.appendChild(loading)
-
+  scrollToBottom()
   const API_URL = "https://api.together.xyz/v1/chat/completions";
   const API_KEY = "4887d284edc48f4ff85e0ba372bb4a054e92d037550478d48825f5263285cc7a";
 
@@ -28,7 +28,7 @@ async function chatWithTogetherAI(prompt) {
   console.log(data);
   
   loading.remove()
-  scrollToBottom()
+  
   let msgTxt = data.choices[0].message.content.split('')
   msgTxt.shift()
   let botWrapper = document.createElement('div');
