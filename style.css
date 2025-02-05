@@ -90,6 +90,8 @@ nav{
   background-color: #24262b;
   padding: 10px;
   border-radius: 5px;
+  white-space: pre-wrap;
+  overflow: auto;
 }
 .message img{
   height: 20px;
@@ -119,13 +121,13 @@ height: 20px;
   position: fixed;
   bottom: 0;
   max-width: 500px;
-  border-radius: 50px;
+  border-radius: 5px;
   overflow: hidden;
   width: 95%;
 }
 
 .chat-input input {
-  padding: 15px;
+  padding: 10px;
   border: none;
   border-radius: 5px 0 0 5px;
   outline: none;
@@ -137,7 +139,7 @@ height: 20px;
   background: #007bff;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 15px 20px;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
