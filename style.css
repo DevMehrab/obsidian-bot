@@ -130,7 +130,7 @@ height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
   width: 100%;
-
+  font-size: medium;
 }
 
 .chat-input button {
