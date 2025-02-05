@@ -46,7 +46,7 @@ nav{
 .chat-container {
   width: 100vw;
   max-width: 500px;
-  height: 85vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
