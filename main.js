@@ -25,7 +25,10 @@ async function chatWithTogetherAI(prompt) {
   });
 
   const data = await response.json();
+  console.log(data);
+  
   loading.remove()
+  scrollToBottom()
   let msgTxt = data.choices[0].message.content.split('')
   msgTxt.shift()
   let botWrapper = document.createElement('div');
@@ -33,16 +36,9 @@ async function chatWithTogetherAI(prompt) {
 
 
   botWrapper.innerHTML = marked.parse(msgTxt.join('')); 
-  let child = botWrapper.children
-  for (let index = 0; index < child.length; index++) {
-    const element = child[index];
-   
-    
-  }
   container.appendChild(botWrapper);
   isTyping = false
   scrollToBottom()
-  changeStatus(); // ✅ Auto-scroll after bot message
 }
 
 function scrollToBottom() {
@@ -54,10 +50,9 @@ function fireMsg(params) {
     let userWrapper = document.createElement('div');
     userWrapper.classList.add('message', 'user');
     userWrapper.innerHTML = marked.parse(input.value);
-    // userWrapper.innerHTML = input.value;
 
     container.appendChild(userWrapper);
-    scrollToBottom(); // ✅ Auto-scroll after user message
+    scrollToBottom(); 
 
     chatWithTogetherAI(input.value);
     input.value = '';
